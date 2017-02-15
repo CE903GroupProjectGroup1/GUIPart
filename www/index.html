@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Brambles Monitoring Tool</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="media/css/bootstrap.min.css">
+    <link rel="stylesheet" href="media/css/bootstrap-theme.min.css">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <style>
+
+        .myheading {
+            background-color: #d5d5d5;
+        }
+
+        .cpu {
+            font-weight: bold;
+            font-size: large;
+            cursor: pointer;
+        }
+
+        .memory {
+            font-weight: bold;
+            cursor: pointer;
+            font-size: large ;
+        }
+
+
+
+        .bgred{
+            background-color: #E02E29;
+            color: #333333;
+        }
+
+        .bg10{
+            background-color: #D9524E;
+            color: #333333;
+        }
+
+        .bg20{
+            background-color: #D57150;
+            color: #333333;
+        }
+
+        .bg30{
+            background-color: #D18D52;
+            color: #333333;
+        }
+
+        .bgorange{
+            background-color: #CEA754;
+            color: #333333;
+        }
+
+        .bg50{
+            background-color: #CABF55;
+            color: #333333;
+        }
+
+        .bg60{
+            background-color: #B8C657;
+            color: #333333;
+        }
+
+        .bgyellow{
+            background-color: #9EC358;
+            color: #333333;
+        }
+
+        .bg80{
+            background-color: #86BF59;
+            color: #333333;
+        }
+
+        .bg90{
+            background-color: #70BB5A;
+            color: #333333;
+        }
+
+        .bggreen{
+            background-color: #5CB85C;
+            color: #333333;
+        }
+
+    </style>
+</head>
+
+<body>
+
+<div class="container well well-lg">
+
+
+    <div class="container">
+        <div class="col-lg-3">
+            <img class="img-thumbnail thumbnail" src="media/images/essex_logo.gif" height="65" width="215"/>
+        </div>
+        <div class="col-lg-9">
+            <div>
+                <h1>Lightweight Brambles Monitor </h1>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="panel panel-default">
+        <div class="panel-heading">Live Montioring Data</div>
+        <div class="panel-body">
+            <p>Please move your mouse over node cell to see last updated time.</p>
+
+            <div class="col-sm-4">
+                <table class="table table-bordered">
+                    <thead>
+                    <tr>
+                        <th class="myheading">Node</th>
+                        <th class="myheading text-center">Cpu Usage</th>
+                        <th class="myheading text-center">Memory Usage</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>pinode001</td>
+                        <td class="text-center  bgred">
+                            <span class="cpu" data-toggle="tooltip" title="<b>Latest Updated Time</b><br><br>12/02/2017 12:02 AM" >60</span>
+                        </td>
+                        <td class="text-center bggreen">
+                            <span class="memory" data-toggle="tooltip" title="<b>Latest Updated Time</b><br><br>12/02/2017 12:02 AM" >10</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>pinode002</td>
+                        <td class="text-center cpu bgorange">
+                            <span class="cpu" data-toggle="tooltip" title="<b>Latest Updated Time</b><br><br>12/02/2017 12:02 AM" >30</span>
+                        </td>
+                        <td class="text-center bgyellow">
+                            <span class="memory" data-toggle="tooltip" title="<b>Latest Updated Time</b><br><br>12/02/2017 12:02 AM" >60</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>pinode003</td>
+                        <td class="text-center cpu bgyellow">
+                            <span class="cpu" data-toggle="tooltip" title="<b>Latest Updated Time</b><br><br>12/02/2017 12:02 AM" >70</span>
+                        </td>
+                        <td class="text-center bgorange">
+                            <span class="memory" data-toggle="tooltip" title="<b>Latest Updated Time</b><br><br>12/02/2017 12:02 AM" >10</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>pinode004</td>
+                        <td class="text-center cpu bggreen">
+                            <span class="cpu" data-toggle="tooltip" title="<b>Latest Updated Time</b><br><br>12/02/2017 12:02 AM" >20</span>
+                        </td>
+                        <td class="text-center bgred">
+                            <span class="memory" data-toggle="tooltip" title="<b>Latest Updated Time</b><br><br>12/02/2017 12:02 AM" >40</span>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>            <div class="col-sm-4">
+                <table class="table table-bordered">
+                    <thead>
+                    <tr>
+                        <th class="myheading">Node</th>
+                        <th class="myheading text-center">Cpu Usage</th>
+                        <th class="myheading text-center">Memory Usage</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>pinode001</td>
+                        <td class="text-center  bgred">
+                            <span class="cpu" data-toggle="tooltip" title="<b>Latest Updated Time</b><br><br>12/02/2017 12:02 AM" >60</span>
+                        </td>
+                        <td class="text-center bggreen">
+                            <span class="memory" data-toggle="tooltip" title="<b>Latest Updated Time</b><br><br>12/02/2017 12:02 AM" >10</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>pinode002</td>
+                        <td class="text-center cpu bgorange">
+                            <span class="cpu" data-toggle="tooltip" title="<b>Latest Updated Time</b><br><br>12/02/2017 12:02 AM" >30</span>
+                        </td>
+                        <td class="text-center bgyellow">
+                            <span class="memory" data-toggle="tooltip" title="<b>Latest Updated Time</b><br><br>12/02/2017 12:02 AM" >60</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>pinode003</td>
+                        <td class="text-center cpu bgyellow">
+                            <span class="cpu" data-toggle="tooltip" title="<b>Latest Updated Time</b><br><br>12/02/2017 12:02 AM" >70</span>
+                        </td>
+                        <td class="text-center bgorange">
+                            <span class="memory" data-toggle="tooltip" title="<b>Latest Updated Time</b><br><br>12/02/2017 12:02 AM" >10</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>pinode004</td>
+                        <td class="text-center cpu bggreen">
+                            <span class="cpu" data-toggle="tooltip" title="<b>Latest Updated Time</b><br><br>12/02/2017 12:02 AM" >20</span>
+                        </td>
+                        <td class="text-center bgred">
+                            <span class="memory" data-toggle="tooltip" title="<b>Latest Updated Time</b><br><br>12/02/2017 12:02 AM" >40</span>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>            <div class="col-sm-4">
+                <table class="table table-bordered">
+                    <thead>
+                    <tr>
+                        <th class="myheading">Node</th>
+                        <th class="myheading text-center">Cpu Usage</th>
+                        <th class="myheading text-center">Memory Usage</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>pinode001</td>
+                        <td class="text-center  bgred">
+                            <span class="cpu" data-toggle="tooltip" title="<b>Latest Updated Time</b><br><br>12/02/2017 12:02 AM" >60</span>
+                        </td>
+                        <td class="text-center bggreen">
+                            <span class="memory" data-toggle="tooltip" title="<b>Latest Updated Time</b><br><br>12/02/2017 12:02 AM" >10</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>pinode002</td>
+                        <td class="text-center cpu bgorange">
+                            <span class="cpu" data-toggle="tooltip" title="<b>Latest Updated Time</b><br><br>12/02/2017 12:02 AM" >30</span>
+                        </td>
+                        <td class="text-center bgyellow">
+                            <span class="memory" data-toggle="tooltip" title="<b>Latest Updated Time</b><br><br>12/02/2017 12:02 AM" >60</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>pinode003</td>
+                        <td class="text-center cpu bgyellow">
+                            <span class="cpu" data-toggle="tooltip" title="<b>Latest Updated Time</b><br><br>12/02/2017 12:02 AM" >70</span>
+                        </td>
+                        <td class="text-center bgorange">
+                            <span class="memory" data-toggle="tooltip" title="<b>Latest Updated Time</b><br><br>12/02/2017 12:02 AM" >10</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>pinode004</td>
+                        <td class="text-center cpu bggreen">
+                            <span class="cpu" data-toggle="tooltip" title="<b>Latest Updated Time</b><br><br>12/02/2017 12:02 AM" >20</span>
+                        </td>
+                        <td class="text-center bgred">
+                            <span class="memory" data-toggle="tooltip" title="<b>Latest Updated Time</b><br><br>12/02/2017 12:02 AM" >40</span>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+
+
+
+        </div>
+
+    </div>
+    <div class="container">
+        <span class="navbar-right" style="margin-right: 35px;"><a href="info.html"
+                                                                  class="btn btn-lg btn-default">Info</a></span>
+    </div>
+
+</div>
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="media/js/jquery.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="media/js/bootstrap.min.js"></script>
+
+
+<script>
+    $(document).ready(function () {
+        $('[data-toggle="tooltip"]').tooltip({html:true});
+    });
+</script>
+</body>
+</html>
