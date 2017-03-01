@@ -4,6 +4,8 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="expires" content="-1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>Brambles Monitoring Tool</title>
 
@@ -27,77 +29,87 @@
             font-weight: bold;
             font-size: large;
             cursor: pointer;
+            text-shadow: 0px 1px 0px rgba(255, 255, 255, .5); /* 50% white from bottom */
         }
 
         .memory {
             font-weight: bold;
             cursor: pointer;
-            font-size: large ;
+            font-size: large;
+            text-shadow: 0px 1px 0px rgba(255, 255, 255, .5); /* 50% white from bottom */
         }
 
-
-
-        .bgred{
+        .bg0 {
             background-color: #E02E29;
             color: #333333;
         }
 
-        .bg10{
+        .bg10 {
             background-color: #D9524E;
             color: #333333;
         }
 
-        .bg20{
+        .bg20 {
             background-color: #D57150;
             color: #333333;
         }
 
-        .bg30{
+        .bg30 {
             background-color: #D18D52;
             color: #333333;
         }
 
-        .bgorange{
+        .bg40 {
             background-color: #CEA754;
             color: #333333;
         }
 
-        .bg50{
+        .bg50 {
             background-color: #CABF55;
             color: #333333;
         }
 
-        .bg60{
+        .bg60 {
             background-color: #B8C657;
             color: #333333;
         }
 
-        .bgyellow{
+        .bg70 {
             background-color: #9EC358;
             color: #333333;
         }
 
-        .bg80{
+        .bg80 {
             background-color: #86BF59;
             color: #333333;
         }
 
-        .bg90{
+        .bg90 {
             background-color: #70BB5A;
             color: #333333;
         }
 
-        .bggreen{
+        .bg100 {
             background-color: #5CB85C;
             color: #333333;
         }
 
+        .nodefont {
+            font-family: monospace;
+            text-shadow: 0px 1px 0px rgba(255, 255, 255, .5); /* 50% white from bottom */
+        }
+
+        #tables{
+            min-height: 1088px;
+        }
+
     </style>
+    <script src="media/js/dateconverter.js"></script>
 </head>
 
 <body>
 
-<div class="container well well-lg">
+<div class="container well well-lg" style="margin-top: -10px;margin-bottom: -10px;">
 
 
     <div class="container">
@@ -113,157 +125,16 @@
     </div>
 
     <div class="panel panel-default">
-        <div class="panel-heading">Live Montioring Data</div>
+        <div class="panel-heading"><b>Live Monitoring Data</b>- Please move your mouse over node cell to see last
+            updated time.
+        </div>
         <div class="panel-body">
-            <p>Please move your mouse over node cell to see last updated time.</p>
 
-            <div class="col-sm-4">
-                <table class="table table-bordered">
-                    <thead>
-                    <tr>
-                        <th class="myheading">Node</th>
-                        <th class="myheading text-center">Cpu Usage</th>
-                        <th class="myheading text-center">Memory Usage</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr>
-                        <td>pinode001</td>
-                        <td class="text-center  bgred">
-                            <span class="cpu" data-toggle="tooltip" title="<b>Latest Updated Time</b><br><br>12/02/2017 12:02 AM" >60</span>
-                        </td>
-                        <td class="text-center bggreen">
-                            <span class="memory" data-toggle="tooltip" title="<b>Latest Updated Time</b><br><br>12/02/2017 12:02 AM" >10</span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>pinode002</td>
-                        <td class="text-center cpu bgorange">
-                            <span class="cpu" data-toggle="tooltip" title="<b>Latest Updated Time</b><br><br>12/02/2017 12:02 AM" >30</span>
-                        </td>
-                        <td class="text-center bgyellow">
-                            <span class="memory" data-toggle="tooltip" title="<b>Latest Updated Time</b><br><br>12/02/2017 12:02 AM" >60</span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>pinode003</td>
-                        <td class="text-center cpu bgyellow">
-                            <span class="cpu" data-toggle="tooltip" title="<b>Latest Updated Time</b><br><br>12/02/2017 12:02 AM" >70</span>
-                        </td>
-                        <td class="text-center bgorange">
-                            <span class="memory" data-toggle="tooltip" title="<b>Latest Updated Time</b><br><br>12/02/2017 12:02 AM" >10</span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>pinode004</td>
-                        <td class="text-center cpu bggreen">
-                            <span class="cpu" data-toggle="tooltip" title="<b>Latest Updated Time</b><br><br>12/02/2017 12:02 AM" >20</span>
-                        </td>
-                        <td class="text-center bgred">
-                            <span class="memory" data-toggle="tooltip" title="<b>Latest Updated Time</b><br><br>12/02/2017 12:02 AM" >40</span>
-                        </td>
-                    </tr>
-                    </tbody>
-                </table>
-            </div>            <div class="col-sm-4">
-                <table class="table table-bordered">
-                    <thead>
-                    <tr>
-                        <th class="myheading">Node</th>
-                        <th class="myheading text-center">Cpu Usage</th>
-                        <th class="myheading text-center">Memory Usage</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr>
-                        <td>pinode001</td>
-                        <td class="text-center  bgred">
-                            <span class="cpu" data-toggle="tooltip" title="<b>Latest Updated Time</b><br><br>12/02/2017 12:02 AM" >60</span>
-                        </td>
-                        <td class="text-center bggreen">
-                            <span class="memory" data-toggle="tooltip" title="<b>Latest Updated Time</b><br><br>12/02/2017 12:02 AM" >10</span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>pinode002</td>
-                        <td class="text-center cpu bgorange">
-                            <span class="cpu" data-toggle="tooltip" title="<b>Latest Updated Time</b><br><br>12/02/2017 12:02 AM" >30</span>
-                        </td>
-                        <td class="text-center bgyellow">
-                            <span class="memory" data-toggle="tooltip" title="<b>Latest Updated Time</b><br><br>12/02/2017 12:02 AM" >60</span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>pinode003</td>
-                        <td class="text-center cpu bgyellow">
-                            <span class="cpu" data-toggle="tooltip" title="<b>Latest Updated Time</b><br><br>12/02/2017 12:02 AM" >70</span>
-                        </td>
-                        <td class="text-center bgorange">
-                            <span class="memory" data-toggle="tooltip" title="<b>Latest Updated Time</b><br><br>12/02/2017 12:02 AM" >10</span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>pinode004</td>
-                        <td class="text-center cpu bggreen">
-                            <span class="cpu" data-toggle="tooltip" title="<b>Latest Updated Time</b><br><br>12/02/2017 12:02 AM" >20</span>
-                        </td>
-                        <td class="text-center bgred">
-                            <span class="memory" data-toggle="tooltip" title="<b>Latest Updated Time</b><br><br>12/02/2017 12:02 AM" >40</span>
-                        </td>
-                    </tr>
-                    </tbody>
-                </table>
-            </div>            <div class="col-sm-4">
-                <table class="table table-bordered">
-                    <thead>
-                    <tr>
-                        <th class="myheading">Node</th>
-                        <th class="myheading text-center">Cpu Usage</th>
-                        <th class="myheading text-center">Memory Usage</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr>
-                        <td>pinode001</td>
-                        <td class="text-center  bgred">
-                            <span class="cpu" data-toggle="tooltip" title="<b>Latest Updated Time</b><br><br>12/02/2017 12:02 AM" >60</span>
-                        </td>
-                        <td class="text-center bggreen">
-                            <span class="memory" data-toggle="tooltip" title="<b>Latest Updated Time</b><br><br>12/02/2017 12:02 AM" >10</span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>pinode002</td>
-                        <td class="text-center cpu bgorange">
-                            <span class="cpu" data-toggle="tooltip" title="<b>Latest Updated Time</b><br><br>12/02/2017 12:02 AM" >30</span>
-                        </td>
-                        <td class="text-center bgyellow">
-                            <span class="memory" data-toggle="tooltip" title="<b>Latest Updated Time</b><br><br>12/02/2017 12:02 AM" >60</span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>pinode003</td>
-                        <td class="text-center cpu bgyellow">
-                            <span class="cpu" data-toggle="tooltip" title="<b>Latest Updated Time</b><br><br>12/02/2017 12:02 AM" >70</span>
-                        </td>
-                        <td class="text-center bgorange">
-                            <span class="memory" data-toggle="tooltip" title="<b>Latest Updated Time</b><br><br>12/02/2017 12:02 AM" >10</span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>pinode004</td>
-                        <td class="text-center cpu bggreen">
-                            <span class="cpu" data-toggle="tooltip" title="<b>Latest Updated Time</b><br><br>12/02/2017 12:02 AM" >20</span>
-                        </td>
-                        <td class="text-center bgred">
-                            <span class="memory" data-toggle="tooltip" title="<b>Latest Updated Time</b><br><br>12/02/2017 12:02 AM" >40</span>
-                        </td>
-                    </tr>
-                    </tbody>
-                </table>
+
+            <div id="tables">
+
+
             </div>
-
-
 
         </div>
 
@@ -276,14 +147,18 @@
 </div>
 
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-<script src="media/js/jquery.min.js"></script>
+<script src="./media/js/jquery.min.js"></script>
 <!-- Include all compiled plugins (below), or include individual files as needed -->
-<script src="media/js/bootstrap.min.js"></script>
+<script src="./media/js/bootstrap.min.js"></script>
+
+<script src="./media/js/dateconverter.js"></script>
 
 
 <script>
+
     $(document).ready(function () {
-        $('[data-toggle="tooltip"]').tooltip({html:true});
+        refreshNodeData();
+        setInterval("refreshNodeData()",30000);
     });
 </script>
 </body>
