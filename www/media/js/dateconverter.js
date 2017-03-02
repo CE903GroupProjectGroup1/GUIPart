@@ -36,8 +36,6 @@ function refreshNodeData() {
 
 
     function getcolornumber(dateString) {
-        var now = new Date();
-
         //"20:40:45 23/02/2017"
 
         var mydate = new Date(getDateFromFormat(dateString, "HH:mm:ss d/MM/yyyy"));
@@ -102,8 +100,6 @@ function refreshNodeData() {
 
     }
 
-    var first_data;
-
     $.getJSON('cluster_monitor_data.json?nocache=' + (new Date()).getTime(), function (data) {
         //console.log(data);
         for (var i = 0; i < 3; i++) {
@@ -145,8 +141,6 @@ function refreshNodeData() {
 
         }
 
-
-        first_data = data;
 
         $('[data-toggle="tooltip"]').tooltip({html: true});
 
