@@ -317,7 +317,6 @@ function refreshNodeData() {
                     '<tbody>';
                 var rowstring = '';
 
-
                 while (counter < colnums[i]) {
                     var freshness = getcolornumber(data[counter].Time);
 
@@ -342,6 +341,8 @@ function refreshNodeData() {
 
                 var tablestart = tablestart + '' + rowstring + '' + tableend;
                 $("#tables").append(tablestart);
+                $('[data-toggle="tooltip"]').tooltip({html: true});
+                
             }
         }
     });
