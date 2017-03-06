@@ -222,7 +222,7 @@ function refreshNodeData() {
     function getcolornumber(dateString) {
         //"20:40:45 23/02/2017"
 
-        var mydate = new Date(getDateFromFormat(dateString, "HH:mm:ss d/MM/yyyy"));
+        var mydate = new Date(getDateFromFormat(dateString, "HH:mm:ss d.MM.yyyy"));
         var subsec = Math.floor(Math.abs(new Date() - mydate) / 1000);
 
         if (subsec < 0)
@@ -233,10 +233,10 @@ function refreshNodeData() {
             if (subsec < 0)
                 return 0;
 
-            else if (subsec <= 30) { //30 sec
+            else if (subsec <= 600) { //30 sec
                 return 100;
             }
-            else if (subsec <= 60) { //1min
+            /*else if (subsec <= 60) { //1min
                 return 90;
             }
 
@@ -272,8 +272,8 @@ function refreshNodeData() {
                 return 10;
             }
 
-            else if (subsec <= 86400) { // 24 hours
-                return 0;
+            */else if (subsec <= 86400) { // 24 hours
+                return 50;
             }
 
 
