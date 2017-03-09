@@ -21,7 +21,7 @@
 
 <body>
 
-<div class="container well well-lg">
+<div class="container well well-lg" style="margin-top: -10px;margin-bottom: -10px;">
 
 
     <div class="container">
@@ -34,13 +34,28 @@
     </div>
 
     <div class="panel panel-default">
-        <div class="panel-heading">Panel heading</div>
-        <div class="panel-body">
-            <p>Some default panel content here. Nulla vitae elit libero, a pharetra augue. Aenean
-                lacinia bibendum nulla sed consectetur. Aenean eu leo quam. Pellentesque ornare sem lacinia quam
-                venenatis
-                vestibulum. Nullam id dolor id nibh ultricies vehicula ut id elit.
-            </p>
+        <div class="panel-heading">You can find some command to stop or start some part of the application.</div>
+        <div class="panel-body" style="padding:20px;">
+              <h5>On <i style="font-family: monospace;">cseepimanX</i> machines</h5>
+                <ul>
+                  <li>
+                  In order to serve monitoring index.html page on the port 8000(Can be changed to allowed ports) a python server needs to be run.
+                  Please run command below when you are in the directory of the index.html.
+                  <div class="well"><b>nohup python3 -m http.server 8000 &</b></div>
+                </li>
+
+                  <li>In order to listen and transform the data coming from brambles two python files need to be run.
+                     Please run commands below when you are in the directory of the index.html and make sure DataTransformer.py and UDPListener.py is in the directory.
+                    <div class="well"><b>nohup python DataTransformer.py &</b></div>
+                    <div class="well"><b>nohup python UDPListener.py &</b></div>
+                  </li>
+              </ul>
+              <h5>On <i style="font-family: monospace;">pinodexxx</i> rasperypi machines</h5>
+                <ul>
+                  <li>
+                </li>
+              </ul>
+
         </div>
 
     </div>
