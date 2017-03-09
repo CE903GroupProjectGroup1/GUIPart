@@ -1,15 +1,16 @@
 python start
-—>python3 -m http.server 8000 &
+—> sudo apt-install screen   need to install this!!!!
+python3
+screen -d -m python3 -m http.server 8000
 
 python2
--->python -m SimpleHTTPServer 8000
+screen -d -m python -m SimpleHTTPServer 8000
 
 
-stop the server 
 python kill
 
 
--->killall python3
+kill -9 `top -n 1 | pgrep screen`
 
--->killall python
-
+screen -ls   —> GET PID OF THE SCREEN
+screen -X -S  #PID QUİT    —> KİLL THE SCREEN
