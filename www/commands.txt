@@ -12,3 +12,21 @@ python kill
 -->killall python3
 
 -->killall python
+
+
+
+from random import randint
+print('[')
+for i in range(1, 95):
+
+    print('{')
+    print('"CPU": "{}",'.format(randint(0, 100)))
+    print('"Memory": "{}",'.format(randint(0, 100)))
+    if i < 10:
+        print('"Node": "pinode00{}",'.format(i))
+    else:
+        print('"Node": "pinode0{}",'.format(i))
+    print('"Time": "{}:{}:{} 13/03/2017"'.format(randint(16, 16),randint(10, 17),randint(10, 59)))
+    print('},')
+
+print(']')
