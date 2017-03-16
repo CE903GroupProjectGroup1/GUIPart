@@ -233,7 +233,7 @@ function refreshNodeData() {
             if (subsec < 0)
                 return 0;
 
-            else if (subsec <= 600) { //30 sec
+            else if (subsec <= 60) { //30 sec
                 return 100;
             }
             /*else if (subsec <= 60) { //1min
@@ -342,7 +342,7 @@ function refreshNodeData() {
                 var tablestart = tablestart + '' + rowstring + '' + tableend;
                 $("#tables").append(tablestart);
                 $('[data-toggle="tooltip"]').tooltip({html: true});
-                
+
             }
         }
     });
