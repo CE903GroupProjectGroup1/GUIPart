@@ -39,20 +39,45 @@
               <h5>On <i style="font-family: monospace;">cseepimanX</i> machines</h5>
                 <ul>
                   <li>
-                  In order to serve monitoring index.html page on the port 8000(Can be changed to allowed ports) a python server needs to be run.
-                  Please run command below when you are in the directory of the index.html.
-                  <div class="well"><b>nohup python3 -m http.server 8000 &</b></div>
+                  In order to serve monitoring index.html page on the port 8000(Can be changed to allowed ports see startCM.sh) a python server needs to be run.
+                  Please run command below when you are in the directory of the index.html or www.
+                  <div class="well"><b>bash startCM.sh</b></div>
                 </li>
-
-                  <li>In order to listen and transform the data coming from brambles two python files need to be run.
-                     Please run commands below when you are in the directory of the index.html and make sure DataTransformer.py and UDPListener.py is in the directory.
-                    <div class="well"><b>nohup python DataTransformer.py &</b></div>
-                    <div class="well"><b>nohup python UDPListener.py &</b></div>
-                  </li>
               </ul>
+
+              <h5>On <i style="font-family: monospace;">cseepimanX</i> machines</h5>
+                <ul>
+                  <li>
+                  In order to stop serving the index.html page the command below needs to be run.
+                  This command will close all python proccess that user run.
+                  <div class="well"><b>bash stopCM.sh</b></div>
+                </li>
+              </ul>
+
               <h5>On <i style="font-family: monospace;">pinodexxx</i> rasperypi machines</h5>
                 <ul>
                   <li>
+                    Copy CPUMemory_UDPSender.c file onto a directory on a Raspberry node.<br>
+                    <div class="well"><b>scp  CPUMemory_UDPSender YourID@pinode001:/home/YourID </b></div><br>
+Login to the node and compile the program.
+<br><br><div class="well"><b>gcc CPUMemory_UDPSender.c -o CPUMemory_UDPSender</b></div><br>
+
+Distribute the compiled program to other nodes.
+<div class="well"><b>scp  CPUMemory_UDPSender YourID@pinode002</b></div><br>
+
+
+<b>Running the agent program</b><br>
+Login to each pinode then run the following command
+<div class="well"><b>./CPUMemory_UDPSender &</b></div><br>
+
+Alternatively run the following script from CSEEPIMAN2 for each node.
+<div class="well"><b>ssh pinode001 ‘nohup  ./CPUMemory_UDPSender’ &</b></div>
+<div class="well"><b>ssh pinode002 ‘nohup  ./CPUMemory_UDPSender’ &</b></div><br>
+
+Stopping all the agents by a single script is something we could not complete.<br>
+At the moment, just closing ‘StartPiAgents.sh’ stops all the agents.
+<div class="well"><b>close ‘StartPiAgents.sh’ terminal window.</b></div>
+
                 </li>
               </ul>
 
